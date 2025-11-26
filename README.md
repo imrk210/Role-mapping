@@ -20,7 +20,7 @@ This project performs large-scale commercial/non-commercial role classification 
 
 ---
 
-# 2. Create & Activate Python Virtual Environment
+# 2. Create & Activate Python Virtual Environment (Linux)
 
 cd /path/to/your/project
 
@@ -36,6 +36,16 @@ deactivate
 
 ---
 
+# 2. Create & Activate Python Virtual Environment (Windows)
+
+cd /path/to/your/project
+
+pip install virtualenv
+
+python -m venv venv
+
+venv\Scripts\activate
+
 # 3. Install Dependencies
 
 pip install -r requirements.txt
@@ -50,7 +60,7 @@ pip install --upgrade pip
 
 Create a .env file:
 
-echo "OPENAI_API_KEY=\"<YOUR_API_KEY>\"" > .env
+echo "OPENAI_API_KEY=\"<YOUR_API_KEY>\"" > .env (Linux)
 
 ---
 
