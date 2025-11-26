@@ -6,7 +6,7 @@ This project performs large-scale commercial/non-commercial role classification 
 
 ---
 
-# 1. Install Linux Subsystem (WSL) and Set Up VS Code
+# 1. Install Linux Subsystem (WSL) and Set Up VS Code (Optional)
 
 ### Windows users
 1. Open PowerShell as Administrator
