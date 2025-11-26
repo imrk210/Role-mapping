@@ -1,2 +1,96 @@
-# README\n\n## Role Mapping – Batch AI Classifier\n\nThis project performs large-scale commercial/non-commercial role classification using a batched OpenAI pipeline and a multi-sheet taxonomy workbook. It is designed to run locally inside a Linux environment (Windows Subsystem for Linux recommended) using Python virtual environments.\n\n---\n\n# 1. Install Linux Subsystem (WSL) and Set Up VS Code\n\n### Windows users\n1. Open PowerShell as Administrator\n2. Enable WSL:\n   wsl --install\n3. Restart your machine when prompted\n4. Open VS Code → install the Remote Development extension pack\n5. In VS Code, open the WSL Linux environment:\n   - Ctrl + Shift + P → 'WSL: New WSL Window'\n   - Select your Linux distro (Ubuntu recommended)\n\n---\n\n# 2. Create & Activate Python Virtual Environment\n\ncd /path/to/your/project\n\npython3 -m venv venv\n\nsource venv/bin/activate\n\n(You should now see (venv) in your terminal.)\n\nTo deactivate:\n\ndeactivate\n\n---\n\n# 3. Install Dependencies\n\npip install -r requirements.txt\n\n(Optional) Upgrade pip:\n\npip install --upgrade pip\n\n---\n\n# 4. Add Your OpenAI API Key\n\nCreate a .env file:\n\necho "OPENAI_API_KEY=\"<YOUR_API_KEY>\"" > .env\n\n---\n\n# 5. Run the Mapping Script\n\npython main.py\n\nDefault inputs:\n- input_census.csv\n- taxonomy_updated.xlsx\n\nDefault output:\n- mapped_census.csv\n\nOverride paths using env vars:\nCENSUS_PATH="..."\nTAXONOMY_PATH="..."\nOUTPUT="..."\n\n---\n\n# 6. Project Structure\n\nproject/\n├── main.py\n├── batch_mapping.py\n├── org_paths.py\n├── Hierarchy_reclassification.py\n├── taxonomy_updated.xlsx\n├── input_census.csv\n├── requirements.txt\n├── .env\n└── README.md\n\n---\n\n# 7. Support\n\nCheck these if issues occur:\n1. venv is active\n2. .env contains valid API key\n3. requirements.txt installed correctly
-# README\n\n## Role Mapping – Batch AI Classifier\n\nThis project performs large-scale commercial/non-commercial role classification using a batched OpenAI pipeline and a multi-sheet taxonomy workbook. It is designed to run locally inside a Linux environment (Windows Subsystem for Linux recommended) using Python virtual environments.\n\n---\n\n# 1. Install Linux Subsystem (WSL) and Set Up VS Code\n\n### Windows users\n1. Open PowerShell as Administrator\n2. Enable WSL:\n   wsl --install\n3. Restart your machine when prompted\n4. Open VS Code → install the Remote Development extension pack\n5. In VS Code, open the WSL Linux environment:\n   - Ctrl + Shift + P → 'WSL: New WSL Window'\n   - Select your Linux distro (Ubuntu recommended)\n\n---\n\n# 2. Create & Activate Python Virtual Environment\n\ncd /path/to/your/project\n\npython3 -m venv venv\n\nsource venv/bin/activate\n\n(You should now see (venv) in your terminal.)\n\nTo deactivate:\n\ndeactivate\n\n---\n\n# 3. Install Dependencies\n\npip install -r requirements.txt\n\n(Optional) Upgrade pip:\n\npip install --upgrade pip\n\n---\n\n# 4. Add Your OpenAI API Key\n\nCreate a .env file:\n\necho "OPENAI_API_KEY=\"<YOUR_API_KEY>\"" > .env\n\n---\n\n# 5. Run the Mapping Script\n\npython main.py\n\nDefault inputs:\n- input_census.csv\n- taxonomy_updated.xlsx\n\nDefault output:\n- mapped_census.csv\n\nOverride paths using env vars:\nCENSUS_PATH="..."\nTAXONOMY_PATH="..."\nOUTPUT="..."\n\n---\n\n# 6. Project Structure\n\nproject/\n├── main.py\n├── batch_mapping.py\n├── org_paths.py\n├── Hierarchy_reclassification.py\n├── taxonomy_updated.xlsx\n├── input_census.csv\n├── requirements.txt\n├── .env\n└── README.md\n\n---\n\n# 7. Support\n\nCheck these if issues occur:\n1. venv is active\n2. .env contains valid API key\n3. requirements.txt installed correctly
+# README
+
+## Role Mapping – Batch AI Classifier
+
+This project performs large-scale commercial/non-commercial role classification using a batched OpenAI pipeline and a multi-sheet taxonomy workbook. It is designed to run locally inside a Linux environment (Windows Subsystem for Linux recommended) using Python virtual environments.
+
+---
+
+# 1. Install Linux Subsystem (WSL) and Set Up VS Code
+
+### Windows users
+1. Open PowerShell as Administrator
+2. Enable WSL:
+   wsl --install
+3. Restart your machine when prompted
+4. Open VS Code → install the Remote Development extension pack
+5. In VS Code, open the WSL Linux environment:
+   - Ctrl + Shift + P → 'WSL: New WSL Window'
+   - Select your Linux distro (Ubuntu recommended)
+
+---
+
+# 2. Create & Activate Python Virtual Environment
+
+cd /path/to/your/project
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+(You should now see (venv) in your terminal.)
+
+To deactivate:
+
+deactivate
+
+---
+
+# 3. Install Dependencies
+
+pip install -r requirements.txt
+
+(Optional) Upgrade pip:
+
+pip install --upgrade pip
+
+---
+
+# 4. Add Your OpenAI API Key
+
+Create a .env file:
+
+echo "OPENAI_API_KEY=\"<YOUR_API_KEY>\"" > .env
+
+---
+
+# 5. Run the Mapping Script
+
+python main.py
+
+Default inputs:
+- input_census.csv
+- taxonomy_updated.xlsx
+
+Default output:
+- mapped_census.csv
+
+Override paths using env vars:
+CENSUS_PATH="..."
+TAXONOMY_PATH="..."
+OUTPUT="..."
+
+---
+
+# 6. Project Structure
+
+project/
+├── main.py
+├── batch_mapping.py
+├── org_paths.py
+├── Hierarchy_reclassification.py
+├── taxonomy_updated.xlsx
+├── input_census.csv
+├── requirements.txt
+├── .env
+└── README.md
+
+---
+
+# 7. Support
+
+Check these if issues occur:
+1. venv is active
+2. .env contains valid API key
+3. requirements.txt installed correctly
+
